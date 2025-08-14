@@ -261,15 +261,16 @@ const Checkout = () => {
                       <span className="text-sm text-muted-foreground">🔒 Secure & Protected Payment</span>
                     </div>
 
-                    <div className="flex gap-4">
-                      <Button variant="outline" asChild className="flex-1">
-                        <Link to="/pricing">
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button variant="outline" asChild className="flex-1 w-full sm:w-auto">
+                        <Link to="/pricing" className="flex items-center justify-center">
                           <ArrowLeft className="mr-2 h-4 w-4" />
                           Back to Programs
                         </Link>
                       </Button>
-                      <Button 
-                        className="flex-1 bg-gradient-primary hover:shadow-glow"
+
+                      <Button
+                        className="flex-1 w-full sm:w-auto bg-gradient-primary hover:shadow-glow"
                         onClick={() => {
                           if (!selectedProgram) {
                             alert("Please select an IT service first");
@@ -282,6 +283,7 @@ const Checkout = () => {
                         Complete Service Request →
                       </Button>
                     </div>
+
                   </CardContent>
                 </Card>
               </div>
